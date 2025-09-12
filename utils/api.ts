@@ -14,7 +14,8 @@ import {
   BagSummaryData
 } from '@/types/product';
 
-const API_BASE_URL = process.env.EXPO_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+const API_BASE_URL = process.env.EXPO_PUBLIC_BACKEND_URL || "https://e-commerce-backend-rktu.onrender.com";
+
 
 
 async function apiCall<T>(endpoint: string, options?: RequestInit): Promise<ApiResponse<T>> {

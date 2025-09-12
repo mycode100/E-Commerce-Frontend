@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.EXPO_PUBLIC_BACKEND_URL || "http://localhost:5000";
+const API_BASE_URL = process.env.EXPO_PUBLIC_BACKEND_URL || "https://e-commerce-backend-rktu.onrender.com";
+
+
 
 
 export interface CreateOrderData {

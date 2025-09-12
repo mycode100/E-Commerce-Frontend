@@ -1,6 +1,7 @@
 import { ApiResponse, Address } from '@/types/product';
 
-const API_BASE_URL = process.env.EXPO_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+const API_BASE_URL = process.env.EXPO_PUBLIC_BACKEND_URL || "https://e-commerce-backend-rktu.onrender.com";
+
 
 console.log('🔧 ADDRESS API CONFIG:');
 console.log('🔧 API_BASE_URL:', API_BASE_URL);

@@ -84,7 +84,8 @@ const YouMayAlsoLikeCarousel: React.FC<YouMayAlsoLikeCarouselProps> = ({
   const scrollViewRef = useRef<ScrollView>(null);
   const sessionId = useRef<string>(`session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`);
 
-  const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+const API_BASE_URL = process.env.EXPO_PUBLIC_BACKEND_URL || "https://e-commerce-backend-rktu.onrender.com";
+
 
   const fetchRecommendations = useCallback(async (showLoading: boolean = true): Promise<void> => {
     if (!currentProductId) {
