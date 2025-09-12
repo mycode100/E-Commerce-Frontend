@@ -2,6 +2,7 @@ import * as SecureStore from "expo-secure-store";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Platform } from "react-native";
 
+// ✅ FIXED: Platform.OS can never be 'undefined', only check for 'web'
 const isSecureStoreAvailable = Platform.OS !== 'web';
 
 export const saveUserData = async (
@@ -17,6 +18,7 @@ export const saveUserData = async (
         SecureStore.setItemAsync("userEmail", email)
       ]);
     } else {
+      // On web, use AsyncStorage (which maps to localStorage)
       await Promise.all([
         AsyncStorage.setItem("userid", _id),
         AsyncStorage.setItem("userName", name),

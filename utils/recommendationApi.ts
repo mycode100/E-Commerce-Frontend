@@ -151,7 +151,7 @@ export class RecommendationApiConfig {
   private defaultTimeout: number;
 
   private constructor() {
-    this.baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:5000';
+    this.baseUrl = process.env.EXPO_PUBLIC_BACKEND_URL || 'http://localhost:5000';
     this.defaultTimeout = 10000;
   }
 
